@@ -1,0 +1,194 @@
+{
+  "name": "html-tree",
+  "displayName": "HTML Tree",
+  "description": "Edit HTML quickly, also support Vue, React and Angular.",
+  "keywords": [
+    "HTML tree",
+    "Vue tree",
+    "React tree",
+    "Angular tree",
+    "Rename element",
+    "Insert element",
+    "Wrap element",
+    "Delete element"
+  ],
+  "version": "0.0.0",
+  "publisher": "zjffun",
+  "engines": {
+    "vscode": "^1.59.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Visualization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjffun/vscode-html-tree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zjffun/vscode-html-tree/issues"
+  },
+  "homepage": "https://github.com/zjffun/vscode-html-tree#readme",
+  "main": "./out/extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "html-tree-treeView",
+          "name": "%extension.treeView.name%"
+        }
+      ]
+    },
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "html-tree.insertBeforeBegin",
+          "when": "viewItem == html-tree-treeView-viewItem || viewItem == html-tree-treeView-viewItemText ||  viewItem == html-tree-treeView-viewItemComment",
+          "group": "inline@1"
+        },
+        {
+          "command": "html-tree.insertAfterBegin",
+          "when": "viewItem == html-tree-treeView-viewItem",
+          "group": "inline@2"
+        },
+        {
+          "command": "html-tree.insertBeforeEnd",
+          "when": "viewItem == html-tree-treeView-viewItem",
+          "group": "inline@3"
+        },
+        {
+          "command": "html-tree.insertAfterEnd",
+          "when": "viewItem == html-tree-treeView-viewItem || viewItem == html-tree-treeView-viewItemText ||  viewItem == html-tree-treeView-viewItemComment",
+          "group": "inline@4"
+        },
+        {
+          "command": "html-tree.wrap",
+          "when": "viewItem == html-tree-treeView-viewItem || viewItem == html-tree-treeView-viewItemText ||  viewItem == html-tree-treeView-viewItemComment",
+          "group": "inline@5"
+        },
+        {
+          "command": "html-tree.rename",
+          "when": "viewItem == html-tree-treeView-viewItem",
+          "group": "inline@6"
+        },
+        {
+          "command": "html-tree.delete",
+          "when": "viewItem == html-tree-treeView-viewItem || viewItem == html-tree-treeView-viewItemText ||  viewItem == html-tree-treeView-viewItemComment",
+          "group": "inline@7"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "html-tree.wrap",
+          "when": "false"
+        },
+        {
+          "command": "html-tree.rename",
+          "when": "false"
+        },
+        {
+          "command": "html-tree.delete",
+          "when": "false"
+        },
+        {
+          "command": "html-tree.select",
+          "when": "false"
+        },
+        {
+          "command": "html-tree.insertBeforeBegin",
+          "when": "false"
+        },
+        {
+          "command": "html-tree.insertAfterBegin",
+          "when": "false"
+        },
+        {
+          "command": "html-tree.insertBeforeEnd",
+          "when": "false"
+        },
+        {
+          "command": "html-tree.insertAfterEnd",
+          "when": "false"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "html-tree.select",
+        "title": "%extension.select.title%"
+      },
+      {
+        "command": "html-tree.wrap",
+        "title": "%extension.wrap.title%",
+        "icon": "$(code)"
+      },
+      {
+        "command": "html-tree.rename",
+        "title": "%extension.rename.title%",
+        "icon": "$(replace)"
+      },
+      {
+        "command": "html-tree.delete",
+        "title": "%extension.delete.title%",
+        "icon": "$(close)"
+      },
+      {
+        "command": "html-tree.insertBeforeBegin",
+        "title": "%extension.insertBeforeBegin.title%",
+        "icon": "images/insertBeforeBegin.svg"
+      },
+      {
+        "command": "html-tree.insertAfterBegin",
+        "title": "%extension.insertAfterBegin.title%",
+        "icon": "images/insertAfterBegin.svg"
+      },
+      {
+        "command": "html-tree.insertBeforeEnd",
+        "title": "%extension.insertBeforeEnd.title%",
+        "icon": "images/insertBeforeEnd.svg"
+      },
+      {
+        "command": "html-tree.insertAfterEnd",
+        "title": "%extension.insertAfterEnd.title%",
+        "icon": "images/insertAfterEnd.svg"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "gulp build",
+    "watch": "gulp watch",
+    "pretest": "yarn run lint && yarn run compile",
+    "test": "node ./out/test/runTest.js",
+    "lint": "eslint src --ext ts",
+    "deploy": "vsce publish --yarn",
+    "_vscode:pack": "yarn run fix:pack && vsce package",
+    "_vscode:install": "ls html-tree-*.vsix | xargs code --install-extension",
+    "_vscode:uninstall": "code --uninstall-extension zjffun.html-tree"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/lodash": "^4.17.0",
+    "@types/mocha": "^8.2.2",
+    "@types/vscode": "^1.59.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "del": "^6.0.0",
+    "eslint": "^7.27.0",
+    "glob": "^7.1.7",
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "mocha": "^8.4.0",
+    "typescript": "^4.4.4",
+    "vsce": "^1.103.1",
+    "vscode-nls-dev": "^4.0.0",
+    "vscode-test": "^1.5.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "parse5": "^7.1.2",
+    "vscode-nls": "^5.0.1"
+  },
+  "icon": "images/icon.png"
+}

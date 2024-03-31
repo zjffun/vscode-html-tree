@@ -1,0 +1,11 @@
+{
+  "extension.treeView.name": "HTML Tree",
+  "extension.select.title": "Select",
+  "extension.wrap.title": "Wrap",
+  "extension.delete.title": "Delete",
+  "extension.rename.title": "Rename",
+  "extension.insertBeforeBegin.title": "Insert Before Begin",
+  "extension.insertBeforeEnd.title": "Insert Before End",
+  "extension.insertAfterBegin.title": "Insert After Begin",
+  "extension.insertAfterEnd.title": "Insert After End"
+}
