@@ -30,6 +30,9 @@
   },
   "homepage": "https://github.com/zjffun/vscode-html-tree#readme",
   "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
     "views": {
       "explorer": [
