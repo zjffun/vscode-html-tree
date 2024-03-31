@@ -14,7 +14,7 @@ export class HtmlTreeService {
 
   constructor() {}
 
-  static getAst(): DocumentFragment {
+  static getAst() {
     const text = vscode.window.activeTextEditor?.document.getText();
 
     if (!text) {
