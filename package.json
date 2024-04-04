@@ -1,7 +1,7 @@
 {
   "name": "html-tree",
   "displayName": "HTML Tree",
-  "description": "Edit HTML quickly, also support Vue, React and Angular.",
+  "description": "Edit HTML quickly, also support Vue and Angular.",
   "keywords": [
     "HTML tree",
     "Vue tree",
@@ -138,22 +138,22 @@
       {
         "command": "html-tree.insertBeforeBegin",
         "title": "%extension.insertBeforeBegin.title%",
-        "icon": "images/insertBeforeBegin.svg"
+        "icon": "images/insertBeforeBegin.png"
       },
       {
         "command": "html-tree.insertAfterBegin",
         "title": "%extension.insertAfterBegin.title%",
-        "icon": "images/insertAfterBegin.svg"
+        "icon": "images/insertAfterBegin.png"
       },
       {
         "command": "html-tree.insertBeforeEnd",
         "title": "%extension.insertBeforeEnd.title%",
-        "icon": "images/insertBeforeEnd.svg"
+        "icon": "images/insertBeforeEnd.png"
       },
       {
         "command": "html-tree.insertAfterEnd",
         "title": "%extension.insertAfterEnd.title%",
-        "icon": "images/insertAfterEnd.svg"
+        "icon": "images/insertAfterEnd.png"
       }
     ]
   },

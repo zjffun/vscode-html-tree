@@ -3,6 +3,7 @@ import { HtmlTreeService } from "../HtmlTreeService";
 import { log } from "../extension";
 import revealItem from "../core/revealItem";
 import { getDescription } from "../util";
+import { descriptionAttrNames } from "../share";
 
 let htmlTreeView: HtmlTreeView;
 
@@ -31,9 +32,20 @@ export class HtmlTreeItem extends vscode.TreeItem {
       this.contextValue = "html-tree-treeView-viewItemComment";
       this.description = getDescription(node.data);
     } else {
-      this.description = node.attrs?.find(
-        (attr: any) => attr.name === "class"
-      )?.value;
+      const descriptions = [];
+
+      const attrs = node.attrs || [];
+
+      for (const attr of attrs) {
+        if (descriptionAttrNames.includes(attr.name)) {
+          const value = attr.value.trim();
+          if (value) {
+            descriptions.push(value);
+          }
+        }
+      }
+
+      this.description = descriptions.join(" ");
     }
   }
 }

@@ -1,6 +1,6 @@
 # vscode-html-tree
 
-Edit HTML quickly, also support Vue, React and Angular.
+Edit HTML quickly, also support Vue and Angular.
 
 ## Features
 
@@ -14,6 +14,10 @@ Edit HTML quickly, also support Vue, React and Angular.
 ```bash
 code --install-extension zjffun.html-tree
 ```
+
+## TODO
+
+- [ ] Support React (JSX).
 
 ## [Release Notes](./CHANGELOG.md)
 
