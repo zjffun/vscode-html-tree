@@ -38,7 +38,8 @@
       "explorer": [
         {
           "id": "html-tree-treeView",
-          "name": "%extension.treeView.name%"
+          "name": "%extension.treeView.name%",
+          "icon": "$(list-tree)"
         }
       ]
     },
