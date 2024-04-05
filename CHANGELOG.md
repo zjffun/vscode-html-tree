@@ -1,3 +1,7 @@
+# v0.0.3
+
+Updated documentation.
+
 # v0.0.2
 
 Updated icons.

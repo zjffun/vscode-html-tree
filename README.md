@@ -2,12 +2,19 @@
 
 Edit HTML quickly, also support Vue and Angular.
 
+![HTML Tree](./images/html-tree.webp)
+
 ## Features
 
-- Insert element: support insert element `beforebegin`, `afterbegin`, `beforeend`, `afterend`.
-- Wrap element: wrap element with another element.
-- Rename element: rename element and keep content.
-- Remove element: remove element and keep content.
+### Insert elements
+
+Support insert elements `beforebegin`, `afterbegin`, `beforeend`, `afterend`.
+
+### Wrap elements.
+
+### Rename elements.
+
+### Remove elements and retain children.
 
 ## Install via CLI
 
