@@ -186,13 +186,11 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "mocha": "^8.4.0",
-    "typescript": "^4.4.4",
-    "vscode-nls-dev": "^4.0.0"
+    "typescript": "^4.4.4"
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "parse5": "^7.1.2",
-    "vscode-nls": "^5.0.1"
+    "parse5": "^7.1.2"
   },
   "icon": "images/icon.png"
 }

@@ -1,10 +1,5 @@
 import * as vscode from "vscode";
 import { throttle } from "lodash";
-// nlsConfig must before other imports
-import "./nlsConfig";
-
-// Add a newline, wait for [Automatically create sort groups based on newlines in organize imports](https://github.com/microsoft/TypeScript/pull/48330)
-
 import { HtmlTreeService } from "./HtmlTreeService";
 import { setContext, textNodeNames } from "./share";
 import HtmlTreeView from "./views/HtmlTreeView";
