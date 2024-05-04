@@ -1,3 +1,7 @@
+# v0.0.4
+
+Add demo images.
+
 # v0.0.3
 
 Updated documentation.
