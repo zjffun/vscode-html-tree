@@ -2,7 +2,7 @@
 
 Edit HTML quickly, also support Vue and Angular.
 
-![HTML Tree](./images/html-tree.webp)
+![HTML Tree](./images/docs/html-tree.webp)
 
 ## Features
 
@@ -10,11 +10,19 @@ Edit HTML quickly, also support Vue and Angular.
 
 Support insert elements `beforebegin`, `afterbegin`, `beforeend`, `afterend`.
 
+<img width="500" src="./images/docs/insert.webp" alt="Insert elements">
+
 ### Wrap elements.
+
+<img width="500" src="./images/docs/wrap.webp" alt="Wrap elements">
 
 ### Rename elements.
 
+<img width="500" src="./images/docs/rename.webp" alt="Rename elements">
+
 ### Remove elements and retain children.
+
+<img width="500" src="./images/docs/remove.webp" alt="Remove elements">
 
 ## Install via CLI
 
